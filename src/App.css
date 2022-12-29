@@ -7,10 +7,38 @@
   pointer-events: none;
 }
 
+@keyframes hotnews {0% { transform: translateY(0); }100% { transform: translateY(-10px); }}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}   
+
+.card:hover {
+  animation-name: cards;
+  animation-duration: 1s;
+ transform: scale(110%); 
+z-index: 2;
+/* box-shadow: 1px 1px 2px rgb(0, 0, 0);    */
+}
+
+@keyframes cards{
+  from{transform:scale(100%);}
+  to{transform: scale(110%);}
+}
+
+.nav-link :hover{
+  animation-name: links;
+  animation-duration: 0.5s;
+  transform: scale(100%); 
+  color: white;
+  width: fit-content;
+}
+
+@keyframes links {
+  from{transform:scale(100%);}
+  to{transform: scale(100%);}
 }
 
 .App-header {
